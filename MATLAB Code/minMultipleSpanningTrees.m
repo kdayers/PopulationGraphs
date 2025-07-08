@@ -1,5 +1,5 @@
 % Set folder containing distance matrix CSV files
-folder = 'C:\Users\maxwe\OneDrive\Documents\graph\distancematrices';  % <-- Change this path
+folder = '/Users/kimberlyayers/Documents/GitHub/PopulationGraphs';  % <-- Change this path
 
 % Get list of CSV files
 files = dir(fullfile(folder, '*.csv'));
@@ -12,7 +12,7 @@ for k = 1:length(files)
     file_path = fullfile(folder, files(k).name);
 
     % Read distance matrix, skip header row
-    A = readmatrix(file_path, 'NumHeaderLines', 1);
+    A = readmatrix(file_path,'NumHeaderLines', 1);
 
     % Optional: replace diagonal with Inf to avoid self-loops
     A(1:size(A,1)+1:end) = inf;
@@ -72,3 +72,5 @@ xlabel('Maximum Edge Weight in MST');
 ylabel('Frequency');
 title('Histogram of Max MST Edge Weights');
 grid on;
+
+writematrix(max_edge_weights,"maxedgeweights.csv")
