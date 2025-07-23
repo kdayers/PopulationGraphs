@@ -2,8 +2,8 @@ function batchDistanceToAdjacency(cutoff)
 %   cutoff     - distance threshold for edge inclusion
 
     % Get list of all .csv files in folder
-    folderPath = 'C:\Users\maxwe\OneDrive\Documents\GitHub\PopulationGraphs';
-    folderSavePath = 'C:\Users\maxwe\OneDrive\Documents\graph';
+    folderPath = 'C:\Users\maxwe\OneDrive\Documents\graph\distancematrices';
+    folderSavePath = 'C:\Users\maxwe\OneDrive\Documents\graph\adjMatricesPopGraphs-p_0.135';
     files = dir(fullfile(folderPath, '*.csv'));
 
     if isempty(files)
