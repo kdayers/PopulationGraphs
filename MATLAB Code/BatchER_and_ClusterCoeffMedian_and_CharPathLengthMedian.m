@@ -1,7 +1,7 @@
 % Parameters
 n = 50;                 % Number of nodes
 p = 0.3589;                % Edge probability
-num_graphs = 1e6;        % Total number of graphs
+num_graphs = 1e3;        % Total number of graphs
 
 % Preallocate arrays for metrics (max size = num_graphs)
 CClosed_values = zeros(num_graphs, 1);
